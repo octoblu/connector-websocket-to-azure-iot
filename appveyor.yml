@@ -1,0 +1,34 @@
+environment:
+  nodejs_version: 8.1.0
+  MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN:
+    secure: CJ8qK8VcRaGDJMfJc4htvN2aWjWV4yuhjxnKfo/9UR2AqbGJneHIopWj25AVgP2u
+  MESHBLU_CONNECTOR_CERT_PASSWORD:
+    secure: VBKIzTLVbFlvUuMqnW0Y4w==
+platform:
+  - x64
+  - x86
+cache:
+ - "%LOCALAPPDATA%\\Yarn"
+shallow_clone: true
+skip_non_tags: true
+install:
+  - ps: Install-Product node $env:nodejs_version $env:Platform
+  - node --version
+  - npm --version
+  - node -e "console.log(process.arch);"
+  - FOR /F "delims=" %%a IN ('node -e "console.log(require('./package.json').version)"') DO SET PACKAGE_VERSION=%%~a
+  - SET PATH=C:\Program Files (x86)\MSBuild\12.0\bin\;%PATH%
+  - SET GYP_MSVS_VERSION=2013
+  - if "%PLATFORM%" == "x64" SET PATH=C:\Python27-x64;%PATH%
+  - if "%PLATFORM%" == "x86" SET PATH=C:\python27;%PATH%
+  - SET PATH=%PATH%;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin;C:\Program Files (x86)\WiX Toolset v3.11\bin
+  - yarn global add meshblu-connector-pkger meshblu-connector-installer-windows-msi meshblu-connector-uploader-github
+  - yarn install
+build: off
+test_script:
+  - yarn test
+after_test:
+  - meshblu-connector-pkger
+  - meshblu-connector-installer-windows-msi
+  - meshblu-connector-installer-windows-msi --user-install
+  - meshblu-connector-uploader-github
