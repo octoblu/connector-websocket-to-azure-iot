@@ -11,6 +11,7 @@ class Connector {
 
     if (!client) throw new Error('Missing required parameter: client')
     this.client = client
+    this.client.on('message', this._onAzureMessage)
 
     if (!webSocketUrl) throw new Error('Missing required parameter: webSocketUrl')
     this.webSocketUrl = webSocketUrl
@@ -19,12 +20,9 @@ class Connector {
   run(callback=_.noop) {
     debug('run')
     this.client.open((error) => {
+      debug('connected!')
       if (error) return callback(error)
-      const ws = new WebSocket(this.webSocketUrl)
-      const waitAndConnectOnce = _.once(this._waitAndConnect)
-      ws.on('message', this._onWebSocketMessage)
-      ws.on('error', waitAndConnectOnce)
-      ws.on('close', waitAndConnectOnce)
+      this._wsConnect()
       return callback()
     })
   }
@@ -39,7 +37,24 @@ class Connector {
     }
   }
 
+  _onAzureMessage(message) {
+    this.client.complete(message)
+    message = JSON.parse(message.data)
+    debug('onMessage', JSON.stringify({data:message},null,2))
+    if (!this.ws) return
+    this.ws.send(JSON.stringify({data:message}))
+  }
+
+  _wsConnect() {
+    this.ws = new WebSocket(this.webSocketUrl)
+    const waitAndConnectOnce = _.once(this._waitAndConnect)
+    this.ws.on('message', this._onWebSocketMessage)
+    this.ws.on('error', waitAndConnectOnce)
+    this.ws.on('close', waitAndConnectOnce)
+  }
+
   _waitAndConnect(error){
+    this.ws = null
     debug('waitAndConnect', error)
     if(this.timeoutHandle) {
       clearTimeout(this.timeoutHandle)

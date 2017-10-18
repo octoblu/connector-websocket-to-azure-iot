@@ -2,7 +2,12 @@
 const Connector = require('./src/Connector')
 const OctoDash  = require('octodash')
 const packageJSON = require('./package.json')
-const clientFromConnectionString = require('azure-iot-device-mqtt').clientFromConnectionString
+const DeviceClient = require('azure-iot-device-amqp').AmqpWs
+const device = require('azure-iot-device')
+
+const clientFromConnectionString = function (connectionString) {
+  return device.Client.fromConnectionString(connectionString, DeviceClient);
+}
 
 const CLI_OPTIONS = [
   {
