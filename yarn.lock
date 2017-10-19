@@ -205,6 +205,16 @@ azure-iot-device-amqp@^1.2.0:
     machina "^2.0.0"
     uuid "^3.0.1"
 
+azure-iot-device-http@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/azure-iot-device-http/-/azure-iot-device-http-1.2.0.tgz#d4c8fa0a1d1f72ab98799c927a3e41e80e08544b"
+  dependencies:
+    azure-iot-common "1.2.0"
+    azure-iot-device "1.1.19"
+    azure-iot-http-base "1.2.0"
+    debug "^3.1.0"
+    node-crontab "^0.0.8"
+
 azure-iot-device-mqtt@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/azure-iot-device-mqtt/-/azure-iot-device-mqtt-1.2.0.tgz#5b7e3504964aa25ff9e6024a57446f42d1f78f47"
@@ -511,6 +521,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
+cron-parser@~0.3.3:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/cron-parser/-/cron-parser-0.3.6.tgz#1e4734ebd5fa054f5766693c52468b17df9681c9"
+
 cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -541,7 +555,7 @@ dashdash@^1.12.0, dashdash@^1.14.1:
   dependencies:
     assert-plus "^1.0.0"
 
-debug@*, debug@^3.0.1:
+debug@*, debug@^3.0.1, debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -1573,6 +1587,12 @@ natural-compare@^1.4.0:
 negotiator@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.3.0.tgz#706d692efeddf574d57ea9fb1ab89a4fa7ee8f60"
+
+node-crontab@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/node-crontab/-/node-crontab-0.0.8.tgz#2db1621419383d076ece9083bc184a4e9eb3ec0f"
+  dependencies:
+    cron-parser "~0.3.3"
 
 node-int64@^0.4.0:
   version "0.4.0"
