@@ -39,6 +39,9 @@ jspm_packages/
 # Typescript v1 declaration files
 typings/
 
+# browserify
+app/bundle.js
+
 # Optional npm cache directory
 .npm
 
@@ -56,4 +59,3 @@ typings/
 
 # dotenv environment variables file
 .env
-

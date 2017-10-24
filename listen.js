@@ -35,9 +35,17 @@ class Command {
     this.panic(error)
   }
 
-  printMessage(message) {
+  printMessage(partitionId, message) {
     console.log('Message received: ')
-    console.log(JSON.stringify(message.body))
+    var data = message.body.toString()
+    try { data = JSON.parse(data) } catch(e) {}
+    console.log(partitionId, JSON.stringify(data,null,2))
+    console.log(`${Date.now()-data}ms`)
+    console.log(message.systemProperties)
+    var to = message.systemProperties.to
+    var toDevice = to.match(/\/devices\/([^\/]*)\/messages\/events/)[1]
+    console.log('toDevice:',toDevice)
+    // /devices/powermate-example/messages/events
     console.log('')
   }
 
@@ -48,10 +56,11 @@ class Command {
     .then(client.getPartitionIds.bind(client))
     .then(function (partitionIds) {
         return partitionIds.map(function (partitionId) {
+            const printMessage = self.printMessage.bind(self,partitionId)
             return client.createReceiver('$Default', partitionId, { 'startAfterTime' : Date.now()}).then(function(receiver) {
                 console.log('Created partition receiver: ' + partitionId)
-                receiver.on('errorReceived', self.panic);
-                receiver.on('message', self.printMessage);
+                receiver.on('errorReceived', self.panic)
+                receiver.on('message', printMessage)
             });
         });
     })
