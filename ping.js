@@ -37,7 +37,7 @@ class Command {
 
     setInterval(()=>{
       console.log('ping...')
-      this.client.sendEvent(new Message(`${Date.now()}`))
+      this.client.sendEvent(new Message(JSON.stringify({ping:Date.now()})))
     }, 10000)
   }
 

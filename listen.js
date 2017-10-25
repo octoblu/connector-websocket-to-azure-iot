@@ -37,10 +37,9 @@ class Command {
 
   printMessage(partitionId, message) {
     console.log('Message received: ')
-    var data = message.body.toString()
-    try { data = JSON.parse(data) } catch(e) {}
+    var data = message.body
     console.log(partitionId, JSON.stringify(data,null,2))
-    console.log(`${Date.now()-data}ms`)
+    console.log(`${Date.now()-data.ping}ms`)
     console.log(message.systemProperties)
     var to = message.systemProperties.to
     var toDevice = to.match(/\/devices\/([^\/]*)\/messages\/events/)[1]
