@@ -39,7 +39,7 @@ class Connector {
 
   _onAzureMessage(message) {
     this.client.complete(message)
-    message = JSON.parse(message.data)
+    message = message.data
     debug('onMessage', JSON.stringify({data:message},null,2))
     if (!this.ws) return
     this.ws.send(JSON.stringify({data:message}))
