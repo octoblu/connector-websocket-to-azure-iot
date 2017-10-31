@@ -1,14 +1,21 @@
 const debug = require('debug')('connector-websocket-to-azure-iot:Connector')
+const DeviceClient = require('azure-iot-device-amqp').AmqpWs
+const device = require('azure-iot-device')
 const Message = require('azure-iot-device').Message
 const bindAll = require('lodash/fp/bindAll')
 const getOr = require('lodash/fp/getOr')
 const WebSocket = require('ws')
 const _ = require('lodash')
 
+const clientFromConnectionString = function (connectionString) {
+  return device.Client.fromConnectionString(connectionString, DeviceClient);
+}
+
 class Connector {
-  constructor({ client, webSocketUrl }) {
+  constructor({ azureIotDeviceConnectionString, webSocketUrl }) {
     bindAll(Object.getOwnPropertyNames(Connector.prototype), this)
 
+    const client = clientFromConnectionString(azureIotDeviceConnectionString)
     if (!client) throw new Error('Missing required parameter: client')
     this.client = client
     this.client.on('message', this._onAzureMessage)
@@ -39,7 +46,7 @@ class Connector {
 
   _onAzureMessage(azureMessage) {
     this.client.complete(azureMessage)
-    message = azureMessage.data
+    const message = azureMessage.data
     debug('onAzureMessage', JSON.stringify(message,null,2))
     if (!this.ws) return
     this.ws.send(JSON.stringify(message))

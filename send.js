@@ -40,7 +40,7 @@ class Command {
     })
     const { azureIotConnectionString, target, message } = this.octoDash.parseOptions()
     this.target = target
-    this.message = message
+    this.message = JSON.parse(message)
     this.client = Client.fromConnectionString(azureIotConnectionString)
   }
 

@@ -2,12 +2,6 @@
 const Connector = require('./src/Connector')
 const OctoDash  = require('octodash')
 const packageJSON = require('./package.json')
-const DeviceClient = require('azure-iot-device-amqp').AmqpWs
-const device = require('azure-iot-device')
-
-const clientFromConnectionString = function (connectionString) {
-  return device.Client.fromConnectionString(connectionString, DeviceClient);
-}
 
 const CLI_OPTIONS = [
   {
@@ -20,29 +14,14 @@ const CLI_OPTIONS = [
     default: 'http://localhost:52052',
   },
   {
-    names: ['azure-iot-hostname'],
+    names: ['azure-iot-device-connection-string','a'],
     type: 'string',
     required: true,
-    env: 'AZURE_IOT_HOSTNAME',
-    help: "The hostname for Azure IOT",
-    helpArg: 'HOSTNAME',
+    env: 'AZURE_IOT_DEVICE_CONNECTION_STRING',
+    help: 'The hostname for Azure IOT',
+    helpArg: 'string',
   },
-  {
-    names: ['azure-iot-device-id'],
-    type: 'string',
-    required: true,
-    env: 'AZURE_IOT_DEVICE_ID',
-    help: "The device id for Azure IOT",
-    helpArg: 'DEVICEID',
-  },
-  {
-    names: ['azure-iot-device-key'],
-    type: 'string',
-    required: true,
-    env: 'AZURE_IOT_DEVICE_KEY',
-    help: "The device key for Azure IOT",
-    helpArg: 'DEVICEKEY',
-  },]
+]
 class Command {
   constructor({argv, cliOptions = CLI_OPTIONS} = {}) {
     this.octoDash = new OctoDash({
@@ -51,15 +30,8 @@ class Command {
       name: packageJSON.name,
       version: packageJSON.version,
     })
-    const {
-      webSocketUrl,
-      azureIotHostname,
-      azureIotDeviceId,
-      azureIotDeviceKey,
-    } = this.octoDash.parseOptions()
-    const connectString = `HostName=${azureIotHostname};DeviceId=${azureIotDeviceId};SharedAccessKey=${azureIotDeviceKey}`
-    const client = clientFromConnectionString(connectString)
-    this.connector = new Connector({ client, webSocketUrl })
+    const options = this.octoDash.parseOptions()
+    this.connector = new Connector(options)
   }
 
   panic(error) {
