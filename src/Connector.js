@@ -29,18 +29,18 @@ class Connector {
 
   _onWebSocketMessage(message) {
     try {
-      debug('message', message)
+      debug('onWebSocketMessage', JSON.stringify(message,null,2))
       this.client.sendEvent(new Message(message))
     } catch(error) {
-      console.error( `Error receiving a message from the powermate: ${error.message}`)
+      console.error( `Error sending a message from device websocket: ${error.message}`)
       return
     }
   }
 
-  _onAzureMessage(message) {
-    this.client.complete(message)
-    message = message.data
-    debug('onMessage', JSON.stringify({data:message},null,2))
+  _onAzureMessage(azureMessage) {
+    this.client.complete(azureMessage)
+    message = azureMessage.data
+    debug('onAzureMessage', JSON.stringify(message,null,2))
     if (!this.ws) return
     this.ws.send(JSON.stringify(message))
   }
