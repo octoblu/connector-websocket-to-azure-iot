@@ -13,6 +13,7 @@ env:
   - secure: CEgsZO4SuituJ/Giiwb8fEeuMcfd85+TVV4RzmcsJxXDeBvA05S0k96wbaC2XAYYOA9QiF82FLUtRDTwBJ2pfI4ENqftu9a780C5BpBg668xYlBBop+tGxjWMA8EJS0pMOh9TL1OgyShVX7t4osvv+n6E2KlukDkq8Z/LDRAz5QoIM52ZVPx6krHCmDroVB2H6JlZlAieC+OEkZaIsqdSd3Q6KTD3OQk4NSi7zAe4Y38fMHfxGiPOjkC5LP4wDoIszzyJ9VUtJEqXJNf8qSFNXTRUt8DiTBN64IBLc57EVGUd47mtjjezGZCHqEr8WWr+t9KmZLjxh7RGQvibvGvQ/6UQFzPtmALNuQgUX3Eyxf9Pu5R5dbdgaqitYIdpIe/qNh0LLS/odKFM7Hu6+JL2D6KRlr2Mx97HuJLf1eIlHJIHxcVzyh43lpI7QLCYiwKYTzI7rtIPrBFUXErtK5ipVGJ6PNI12FXlyxW+qDAi5rfkWHqSeDfmHGC/h/ZIsKtmjqqR02a5wpa/Flgx/TQRCZkzRvIUsaT1gMF+IIzY4nXjbOaZDIq8DgJYyYJXOgaJ7bVuwFknxTAzH3/r9ov6y56GLMgft8n3modGAGNzx90mI1/Ich+XGvhNoLH4X2BKtY/hrgbw4lYi2DhCxqeQklfR8yYlfdFdpFS0G2DEsg=
   - secure: TARhgwlW/vyB380h9c6U+e+mx9jz12DOVkCflAgzmLGnNrW0/yTf/GWLMQ/Bzutr21z0r7qiQW8oQwPrrN95VC4DViTu7Wgo4rfZQKqPkXWpWc4OngP+8JLdxPTF7pTPVU+tsYUBr60xnOm2JhuewjjLwlLgyaJsjogLOEAddF+0ZdQVgXZDY5kRes1ehMC4N9SE5/qXWHRQwcPMpHqiG/+ynAX1F4AWA/Je2Veb3x8q+QXp4cbfmXRujRvzbtwooqZTh0CogMNRjtmlcOhcO5QHX5Nn4ar1PUg6DsPL7eqJoM6BXoLft1edtdf2QK/AEvny6tbcKGzONjoZKewhGf+/2zysQN48DsMavryhSBzn90qWxpZdJKyXVgnegud1IJn/SZwbm1n4P4UFw1P4V8aHlFmCRGIx3poTRgVZRgZ7dZBINnokx1tyzyqko4oqu1OnY+0y7JMJzA6ulIRkjQczeF2Yd5XOhLx/BALFO3rx6DdS0rgECD6TeyZs4y2/ZMocp9b+vxdGM4agOt3LWr+hTzfg+/UjCJMzF4pyG3fH4yoDyvRVDHrLteEnqdcs2KtpAEilVaC5t4mk2Uidp8b6htM+tZ6Jv+ShKeDh2IZ8mxcORSRjDfJFy+wqKacqaiPo3XiEX2gfzI9GDxvir3bLw4fCa+p5vVwOQ//+aPU=
   - secure: FEGlZdP1WM61Zcm+1zzYz72L3+hem98Hiuh6sPfdwHKZBF0LtlI/2l5GZyz7vp+flH1JPQSCSSA2Pzb4rhT8RKGylifwT8pVa6tDs/2JEVWN0zvBGTrsiF/4FLBH4vuLpVH+KT2tvWiCVV8rpYdnpvpkpG12bertfuzU/CohNESt8vfqU0YgsIzLzpQSkiRDeSZ6eJ+pWH8APimaQPUojuBJSbnBG45kUPRjeWRICjdj1W341oUhp6SUol4fJ42KIcQJfKI22cQLHvyjDBRbRYEM0nN9t49QZfnnOtjI/b/UShhHTLPDlMnQcaqToRo5LV7/8KenyIdUxOyj3TRuDGBHpd45pbODDfy8tlra22a5Aza5CzRppfJ8J4fja2X3OxZD5kfwyDzRclpqjfIhUoqLyi29vI98e56oOEQs7tQYA5LLp3mnmSOmSyDXm0TIFlwhUJdI9kXatZEPZMOp/mep96F1XWR+vGAJCPPEjKt4nePttPVLqRZPZq8pR5TsmBrTsaFRF7crcFHb7yextUmRRwld6iQ3xY+YZU0wG0FLoKhKP/0cLGFG0Lr4hZVEkItyEIy4jzF3QoaPW8jr/uPcBnOBw8bFmvVOdGMFfhawrRROikdayZ/gOEFT5WUQ+iFyNb8zL05EdyBHO0PKpIO0KRuqHz09XDa1K2DnOZ0=
+  - secure: TNoQzxCL6TQ0JyxXrQ+TWPgxuSiIPbZq2RAZXkYz69+XleKUnRQQvtDjPhsqWfi6flKOVwVb+ANvNj5NkYUpKKy3a/AS3qxBlSaiUUzs5XfwZGEolgrFd0V+KmczciJHVm1jv2rZFD5ZSwiJ8tjOZIe81CTAWinfbN9Q2fl7Yvam3p/dWEh1i3XtG/QKjV6LYzipBWOQdgdAt3pQKy/5zY6HcneUnFzJMmOJ8W41oRQp2tua099C082L5XsTt1viR5I7mzFVFTbKKsWFIe9GD3KIe3GsdMpbcvdRvstD+S1GB/lZR/ZKUYz/qc6r7vxZZFKrSd+u7kyJA5FRgGirWf+yD1fUCAx50wH2J5+0b1xgJFi9KlGmMOIc4QOzTRN80tuwTdWRLlLGd/F3e0gQx3ai8xwe4h66DBCFBC2l2BRsGgss98h/osYXHbpfMHKvar0UwxbsOC1OlqsCaraaJr3AJUpv/YquiL2w2aJXwlVedVwTSnK6R57YKWdAJM1D6U3/xktZygjzcVWrpylupQvQWJfXJQIsIOgTaS4LhKcjsgWw+s5NtKKU78nXrQlqei8HzIa2JU/5EKD4atayyI68sa7sU3jzRx0Kmx1pSKWVcXElrKM3QdbU/PjxkEnhgCNT+un3bI4vL8CFIgZbR268NYBMZjtgnmHkLY7bmMo=
 deploy:
   provider: npm
   email: serveradmin@octoblu.com
@@ -37,6 +38,58 @@ matrix:
         tags: true
         repo: octoblu/powermate-websocket
   - os: linux
+    dist: trusty
+    language: shell
+    sudo: required
+    services:
+    - docker
+    install:
+    - docker pull octoblu/meshblu-connector-builder:linux-x86
+    script:
+    - |
+      docker run --rm --volume $PWD:/work \
+        --env TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG \
+        --env TRAVIS_BRANCH=$TRAVIS_BRANCH \
+        --env MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN=$MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN \
+        --env AWS_REGION=$AWS_REGION \
+        --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+        --env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+        --env MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD=$MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD \
+        --env MESHBLU_CONNECTOR_CERT_PASSWORD=$MESHBLU_CONNECTOR_CERT_PASSWORD \
+        octoblu/meshblu-connector-builder:linux-x86 \
+          bash -c 'export HOME=/tmp/cache \
+            && meshblu-connector-pkger \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/connector-websocket-to-azure-iot \
+            && meshblu-connector-uploader-github \
+            && upload-deb-s3 \
+          '
+  - os: linux
+    dist: trusty
+    language: shell
+    sudo: required
+    services:
+    - docker
+    install:
+    - docker pull octoblu/meshblu-connector-builder:linux-x64
+    script:
+    - |
+      docker run --rm --volume $PWD:/work \
+        --env TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG \
+        --env TRAVIS_BRANCH=$TRAVIS_BRANCH \
+        --env MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN=$MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN \
+        --env AWS_REGION=$AWS_REGION \
+        --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+        --env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+        --env MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD=$MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD \
+        --env MESHBLU_CONNECTOR_CERT_PASSWORD=$MESHBLU_CONNECTOR_CERT_PASSWORD \
+        octoblu/meshblu-connector-builder:linux-x86 \
+          bash -c 'export HOME=/tmp/cache \
+            && meshblu-connector-pkger \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/connector-websocket-to-azure-iot \
+            && meshblu-connector-uploader-github \
+            && upload-deb-s3 \
+          '
+  - os: linux
     sudo: required
     language: shell
     services:
@@ -57,7 +110,7 @@ matrix:
         octoblu/meshblu-connector-builder:linux-armv7 \
           bash -c 'export HOME=/tmp/cache \
             && meshblu-connector-pkger \
-            && meshblu-connector-installer-debian --destination-path=/usr/local/bin \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/connector-websocket-to-azure-iot \
             && meshblu-connector-uploader-github \
             && upload-deb-s3 \
           '
