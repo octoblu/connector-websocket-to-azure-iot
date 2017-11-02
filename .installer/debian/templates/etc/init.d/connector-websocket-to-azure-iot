@@ -12,7 +12,7 @@
 
 set -u
 
-SCRIPT="/usr/local/bin/connector-websocket-to-azure-iot"
+SCRIPT="/usr/share/connector-websocket-to-azure-iot/connector-websocket-to-azure-iot"
 USER="connector-websocket-to-azure-iot"
 NAME="connector-websocket-to-azure-iot"
 WORKING_DIRECTORY="/usr/share/connector-websocket-to-azure-iot"

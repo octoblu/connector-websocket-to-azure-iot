@@ -6,7 +6,7 @@ Requires=network.target
 Type=simple
 #POSTINSTALL_USER_HOOK
 PermissionsStartOnly=true
-ExecStart=/usr/local/bin/connector-websocket-to-azure-iot
+ExecStart=/usr/share/connector-websocket-to-azure-iot/connector-websocket-to-azure-iot
 
 [Install]
 WantedBy=multi-user.target
