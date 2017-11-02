@@ -1,6 +1,6 @@
 {
   "name": "connector-websocket-to-azure-iot",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "main": "command.js",
   "repository": "git@github.com:octoblu/connector-websocket-to-azure-iot.git",
   "author": "sqrtofsaturn <sqrtofsaturn@gmail.com>",
