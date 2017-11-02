@@ -1,0 +1,63 @@
+branches:
+  only:
+  - "/^v[0-9]/"
+os: linux
+dist: trusty
+language: shell
+env:
+  global:
+  - secure: i4e8446ZLYi8eSwZJpyMx80ZA6g+dfJHvW4OQmWYWSVD6peeuldio70V2wMqSRzQ2zuMZJDd0Iw16JuwWtHlx8MBKA9ZECoVRDZ8Rk7CsmZAIPMJqncMKsGvtOxrOIFqG8BpNaxOQa10uA6PypFIwSnAzJEqRi9WjoSJaShF+OUj6ct1ouoYE7Xr4cq86mX6CZFr9Zxu4/mRZsDv8mIFjdjGifDFfuTNesxQwk3e1zshFkFiT2569i9MmNfPnPMUsYyB50CZsxifXh0I0RxYuaPka24C/XLYOZhC5rnbxQ9WMRxOGwC9PVPf8ulaEVY/LLNx+sBEUGv5IsBoLivZEuodzaDUNQ8CmAEj7VDJqK8oKYRM24Snyt9HY0n7RG8sNh4b3FoqGaEAsdWS+bDswiikfw/MgbLFYquV/cIV8gGN24xJu3mfeqlIzeVZ33hy1h8rnG0c3CNajIaf+QMh04twagJYV2S3M0nR4Y6PLja4/xVThWeSrtwEeeI3QSKzaNPQwwCjS8XCYSp7XzQrnWM325ipg1/Cp0MBha7xriMlMdMaj7rWgU3rk1JdfGCjiT4pixXS/U8BCibRZiOnM7EwRfoKN5rDIQaI9304L3Kfz+roFCCce8nnKHraqY+i/Kgs747NFWNd5vI3wjmlF9TgnCVW1gM4L1WuDFpau88=
+  - secure: ll3uCT5YIatj1eLKQBb4RPeOkRYxcX6hWnc0d8ewK3j3TQKVpswE76zYeRCZiFAVIJDMiNPiFXz9QyOF2rn71//nH/W07ZDq5IX12t2qGeDeqePAyPgGd+Ei3FTqvANYFf6NAInhA2cJ4Beyh60yv5MeT/6UAbAm5qEiXpP8la0rgCLXjQ4cVpveFVJ+F+aZqsUM3Vjg1vQJP8Mhu3pj28rHmnZwd+WeBDqH0k0NGB/Xy+oNtrzvDxqEHCmMLyz585Nf022hWGn/5Xjsz46tOy/gi1Jy/GCOiuVuP8Ua2s86a0jObaZLJPA2xeaMp69dy0DjzXjAQdZ04QJH1uSYW5WemQpFQEIauSt/XjvQx+oS/J4Ravz1LR917uFt75B5CHP5PTzfpII+Z6ODn+pqog5qGxg6t0HtnD2k7/D0NuTckPNHwb1Wj+Kzx9LqrQ6JmvHyn5I6CDf5jbtQxSdbEy6Q21MHJsPY2Day8Ri4JujRMdcZDdRVhshBemIBzuy3RmChM0UphJyMbzEMJ94ZgQqxLnZzUAolEhNiBzT8pE0WSniQRahy5mJAZrq1mrlQlOETTY3Q+j+4PAVVXOyUJL0p/hd+zdoS6+J3NWlFuAzABYvAouFeWPBEz6ZmgEIGOVERiuE/Tqg0qKA62vfBrlmEU9BqVUS99TjbygFRxgE=
+  - secure: JYRyxmwVoRVb+7nuh7YU7x//nAcnZTTeGKr0lPzCjEg36BWTZ4ObQ/7R1esALg6oAcoO9SznvMHExiZdGMhbPNhrOXpCT5pohPXh9mHvyAwgqyjIxpJSPaiNoIZag7BdLm53zAa6Us8ifBTwyxZGg8usmVBbpxzo7xWHiJLWhfi/q1XKEwQVmjUc+lgntA+/gyddA4+MoeFSIPRLJncEBcODs4RaAzpaxzsqwwFNMV+F1riWx3Tj24KQUMru0VtsXlUbKHiwG+A2yJM9SjFF2NkW97MSDKdreZ23BwmHdKmfM0OkEepE8Z124+DxEIYqaZfDH3x/P15OX/aAbFgCol/CpvRnQMHEr9RB6oZGDIfXX4XJ6zTJHfIOdNHdNt4v49Z16ncd7Rny2/YxxVMQXfSU/xWSUUviBn12Hu5MVohXbKhvNZsu3UtYl4Dhsg7FIFsVRfA+oeDoFkq8Pbx7X5Sj8fADRWYH05e/8GjaYstMFS/EoDip8LckMXh+3J4l5efCPdPvFlDZGKwym/n8nLQ023JmkxIeplV3zAd+7smQkoWZWTIdQQPI2gFXePx00eg/Z+MtzzT3d5gXfPiJzDciH04sFICvuFgswXw1VrWhIxyHS9/RrLekqm0aC+Fyq+q92UJibeyiOxLtEBkFeybH0ey2Nt08u7mn8lHop+M=
+  - secure: csJG9inWZ4pHttn3VEQPf4QTkLD9KQ/XA/vyHlGB+AT+wTV7JLui4/Kki5+gePYpgnCz/NMhcOG4V7QRzDSPzosUzKVazVdoFHZykazvQ1PNGc3xioZHeT2iboHhNjzkoLGJzWSziKhBrBrUYgA1++kOgUP8NG01DtVLSoTGoNkjeete/wKeq4AiQkdHM6EZnW3ZkU2SKMerFlIOWm3LenlESvflsg/BmzZrkI7ls7clE/vkfcovcTfb/31OH/mpbtccHLFoxpf3vCvEHS+RfiRvT4NOWc8cji1rzpv+hPx7XC3EOlA7M7SUJrr4KJg2RXghYwowBpI6YU0aZIufqC99dz+zUtqTJp7YI0BOTLlaNE3siQvBgPSlya8ENhri5jiO4r4Qgw6pGPmd/FZIJWgBc5uaoLHndkLRT7vdscE9X/kMOr3eHvztWazXRA+Bg/LWXe7BBqv0E5gdsonqZMpjHJukO80f50jz14w3HEYEsglzlLMGBMPqbsI6UcYwpBEkbaGABMsES/vyQXAgKJ+v7AaUIL/YPl+YgOoXdVp963rw6dBUwNxUMKUWvhF16WkkFu3XRuulKWtf+n5YN2dyInyTwSlPSxiCp+J6EIsKB/uFyApMYyNSEwp64MmZisae1fK22eF9gOo3Sqdjo1VNUu7zytkC7toBLn0lsSw=
+  - secure: CEgsZO4SuituJ/Giiwb8fEeuMcfd85+TVV4RzmcsJxXDeBvA05S0k96wbaC2XAYYOA9QiF82FLUtRDTwBJ2pfI4ENqftu9a780C5BpBg668xYlBBop+tGxjWMA8EJS0pMOh9TL1OgyShVX7t4osvv+n6E2KlukDkq8Z/LDRAz5QoIM52ZVPx6krHCmDroVB2H6JlZlAieC+OEkZaIsqdSd3Q6KTD3OQk4NSi7zAe4Y38fMHfxGiPOjkC5LP4wDoIszzyJ9VUtJEqXJNf8qSFNXTRUt8DiTBN64IBLc57EVGUd47mtjjezGZCHqEr8WWr+t9KmZLjxh7RGQvibvGvQ/6UQFzPtmALNuQgUX3Eyxf9Pu5R5dbdgaqitYIdpIe/qNh0LLS/odKFM7Hu6+JL2D6KRlr2Mx97HuJLf1eIlHJIHxcVzyh43lpI7QLCYiwKYTzI7rtIPrBFUXErtK5ipVGJ6PNI12FXlyxW+qDAi5rfkWHqSeDfmHGC/h/ZIsKtmjqqR02a5wpa/Flgx/TQRCZkzRvIUsaT1gMF+IIzY4nXjbOaZDIq8DgJYyYJXOgaJ7bVuwFknxTAzH3/r9ov6y56GLMgft8n3modGAGNzx90mI1/Ich+XGvhNoLH4X2BKtY/hrgbw4lYi2DhCxqeQklfR8yYlfdFdpFS0G2DEsg=
+  - secure: TARhgwlW/vyB380h9c6U+e+mx9jz12DOVkCflAgzmLGnNrW0/yTf/GWLMQ/Bzutr21z0r7qiQW8oQwPrrN95VC4DViTu7Wgo4rfZQKqPkXWpWc4OngP+8JLdxPTF7pTPVU+tsYUBr60xnOm2JhuewjjLwlLgyaJsjogLOEAddF+0ZdQVgXZDY5kRes1ehMC4N9SE5/qXWHRQwcPMpHqiG/+ynAX1F4AWA/Je2Veb3x8q+QXp4cbfmXRujRvzbtwooqZTh0CogMNRjtmlcOhcO5QHX5Nn4ar1PUg6DsPL7eqJoM6BXoLft1edtdf2QK/AEvny6tbcKGzONjoZKewhGf+/2zysQN48DsMavryhSBzn90qWxpZdJKyXVgnegud1IJn/SZwbm1n4P4UFw1P4V8aHlFmCRGIx3poTRgVZRgZ7dZBINnokx1tyzyqko4oqu1OnY+0y7JMJzA6ulIRkjQczeF2Yd5XOhLx/BALFO3rx6DdS0rgECD6TeyZs4y2/ZMocp9b+vxdGM4agOt3LWr+hTzfg+/UjCJMzF4pyG3fH4yoDyvRVDHrLteEnqdcs2KtpAEilVaC5t4mk2Uidp8b6htM+tZ6Jv+ShKeDh2IZ8mxcORSRjDfJFy+wqKacqaiPo3XiEX2gfzI9GDxvir3bLw4fCa+p5vVwOQ//+aPU=
+  - secure: FEGlZdP1WM61Zcm+1zzYz72L3+hem98Hiuh6sPfdwHKZBF0LtlI/2l5GZyz7vp+flH1JPQSCSSA2Pzb4rhT8RKGylifwT8pVa6tDs/2JEVWN0zvBGTrsiF/4FLBH4vuLpVH+KT2tvWiCVV8rpYdnpvpkpG12bertfuzU/CohNESt8vfqU0YgsIzLzpQSkiRDeSZ6eJ+pWH8APimaQPUojuBJSbnBG45kUPRjeWRICjdj1W341oUhp6SUol4fJ42KIcQJfKI22cQLHvyjDBRbRYEM0nN9t49QZfnnOtjI/b/UShhHTLPDlMnQcaqToRo5LV7/8KenyIdUxOyj3TRuDGBHpd45pbODDfy8tlra22a5Aza5CzRppfJ8J4fja2X3OxZD5kfwyDzRclpqjfIhUoqLyi29vI98e56oOEQs7tQYA5LLp3mnmSOmSyDXm0TIFlwhUJdI9kXatZEPZMOp/mep96F1XWR+vGAJCPPEjKt4nePttPVLqRZPZq8pR5TsmBrTsaFRF7crcFHb7yextUmRRwld6iQ3xY+YZU0wG0FLoKhKP/0cLGFG0Lr4hZVEkItyEIy4jzF3QoaPW8jr/uPcBnOBw8bFmvVOdGMFfhawrRROikdayZ/gOEFT5WUQ+iFyNb8zL05EdyBHO0PKpIO0KRuqHz09XDa1K2DnOZ0=
+deploy:
+  provider: npm
+  email: serveradmin@octoblu.com
+  api_key:
+    secure: pGNon5srznjP1yZJdhH5eGj0D5KGfuOvRJSB5Dzy3egU3jZnnx0RyEB1fwu+MrWSADKO73aePJrIV6ihK9JfRs+7uYllAPLVT5eFrNbNKFPG7mByZXelkPQb7wEQOC/JD7G+lb7xJhnB2SkPps59Nx2PxbDZTblHSRjrnJLqeqGQHrv2R4i3JRT3DbzxAdNRT2c9K5s9W8ELC9iToUvjMtxI20tN7LT0/XN9mFI6MURhPOaAuzfcLwzdtAQMqCBVr3YtyO/RVddYQ3117yMM1sdgtOjHWhb2hmYWvvMMJYqT8Y7AClXx6qhQgeiV2Jq5CMlUHMetPSeAsIGJ9d3BNsMG7E74inH0tzWZYxmPbttVBUesw5dUzhAyMxnSQ36jJq6PtqPqqXDX6WMndRXzjWUPYCWWt6G2DjGNOcsX+uPVNY1ZmQxhCb9pe6YliN1pr0gCh4XJad566gNKKlalFkOFLcIvMfPuNzAczy+c1toOl2hQq6dZ9kShEPAa15Fd3MYN1n6qVejwT65X9mL/qCR1Z6z2sXTGbqBSWUYZIlZFSk/A99nYpfxaIXs88HhNZ2DRZVXBgXnSuqgrnglLwKCHgJbT+X5Bni0CH6Dm2fj0ZWRVjhMBys95HWhOmq7ZHFzP74JPx67lscxwywJOCmCy+zLU+7tlHms4lmNWImo=
+  on:
+    tags: true
+    repo: octoblu/connector-websocket-to-azure-iot
+matrix:
+  fast_finish: true
+  include:
+  - os: linux
+    language: node_js
+    node_js: '8'
+    before_install:
+    - sudo apt-get -qq update
+    deploy:
+      provider: npm
+      email: serveradmin@octoblu.com
+      api_key:
+      on:
+        tags: true
+        repo: octoblu/powermate-websocket
+  - os: linux
+    sudo: required
+    language: shell
+    services:
+    - docker
+    install:
+    - docker pull octoblu/meshblu-connector-builder:linux-armv7
+    script:
+    - |
+      docker run --rm --volume $PWD:/work \
+        --env TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG \
+        --env TRAVIS_BRANCH=$TRAVIS_BRANCH \
+        --env MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN=$MESHBLU_CONNECTOR_UPLOADER_GITHUB_TOKEN \
+        --env AWS_REGION=$AWS_REGION \
+        --env AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
+        --env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
+        --env MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD=$MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD \
+        --env MESHBLU_CONNECTOR_CERT_PASSWORD=$MESHBLU_CONNECTOR_CERT_PASSWORD \
+        octoblu/meshblu-connector-builder:linux-armv7 \
+          bash -c 'export HOME=/tmp/cache \
+            && meshblu-connector-pkger \
+            && meshblu-connector-installer-debian --destination-path=/usr/local/bin \
+            && meshblu-connector-uploader-github \
+            && upload-deb-s3 \
+          '
