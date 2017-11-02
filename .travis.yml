@@ -82,7 +82,7 @@ matrix:
         --env AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
         --env MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD=$MESHBLU_CONNECTOR_ENCRYPTION_PASSWORD \
         --env MESHBLU_CONNECTOR_CERT_PASSWORD=$MESHBLU_CONNECTOR_CERT_PASSWORD \
-        octoblu/meshblu-connector-builder:linux-x86 \
+        octoblu/meshblu-connector-builder:linux-x64 \
           bash -c 'export HOME=/tmp/cache \
             && meshblu-connector-pkger \
             && meshblu-connector-installer-debian --destination-path=/usr/share/connector-websocket-to-azure-iot \

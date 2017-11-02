@@ -1,0 +1,16 @@
+{
+  "scripts": [
+    "package.json",
+    "index.js",
+    "lib/**/*.js",
+    "jobs/**/*.js",
+    "configs/**/*.js",
+    "node_modules/meshblu-connector-schema-generator/dist/**/*.js",
+    "node_modules/meshblu-connector-schema-generator/**/*.js",
+    "node_modules/meshblu-connector-runner/**/*.js",
+    "node_modules/meshblu-connector-runner/dist/**/*.js"
+  ],
+  "assets": [
+    "assets"
+  ]
+}
