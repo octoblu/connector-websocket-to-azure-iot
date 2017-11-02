@@ -1,0 +1,12 @@
+<Include>
+  <Directory Id='TARGETDIR' Name='SourceDir'>
+    <Directory Id='ProgramFiles$(var.If64)Folder' Name='PFiles'>
+      <Directory Id='MeshbluConnectors_Folder' Name='MeshbluConnectors'>
+        <Directory Id='ConnectorsNoConfig_Folder' Name='connectors-no-config'>
+          <Directory Id='INSTALLDIR' Name='connector-websocket-to-azure-iot'>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Directory>
+</Include>

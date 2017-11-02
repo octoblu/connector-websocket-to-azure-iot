@@ -1,0 +1,108 @@
+#!/bin/sh
+# Start/stop the connector-websocket-to-azure-iot daemon.
+#
+### BEGIN INIT INFO
+# Provides:          connector-websocket-to-azure-iot
+# Required-Start:    $remote_fs $syslog $network
+# Required-Stop:     $remote_fs $syslog $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Description: Meshblu connector say hello
+### END INIT INFO
+
+set -u
+
+SCRIPT="/usr/local/bin/connector-websocket-to-azure-iot"
+USER="connector-websocket-to-azure-iot"
+NAME="connector-websocket-to-azure-iot"
+WORKING_DIRECTORY="/usr/share/connector-websocket-to-azure-iot"
+DESCRIPTION="Powermate WebSocket"
+
+. /lib/lsb/init-functions
+. "/etc/default/connector-websocket-to-azure-iot"
+
+LOGDIR="/var/log/connector-websocket-to-azure-iot"
+LOGFILE="$LOGDIR/run.log"
+
+mkdir -p "$LOGDIR"
+chown -R "connector-websocket-to-azure-iot:connector-websocket-to-azure-iot" "$LOGDIR"
+
+do_start() {
+  start-stop-daemon --start \
+    --user "$USER" --chuid "$USER" \
+    --background --chdir "$WORKING_DIRECTORY" \
+    --startas "/bin/sh" -- -c "exec $SCRIPT >> $LOGFILE 2>&1"
+}
+
+do_stop() {
+  start-stop-daemon --stop \
+    --user "$USER" --chuid "$USER" \
+    --retry=5
+}
+
+do_status() {
+  start-stop-daemon --status \
+    --user "$USER" --chuid "$USER"
+}
+
+case "$1" in
+  start)
+    log_daemon_msg "Starting $DESCRIPTION" "$NAME"
+    do_start
+    case "$?" in
+      0)
+        log_end_msg 0
+        ;;
+      1)
+        log_progress_msg "already started"
+        log_end_msg 0
+        ;;
+      *)
+        log_end_msg 1
+        ;;
+    esac
+    ;;
+  stop)
+    log_daemon_msg "Stopping $DESCRIPTION" "$NAME"
+    do_stop
+    case "$?" in
+      0)
+        log_end_msg 0
+        ;;
+      1)
+        log_progress_msg "already stopped"
+        log_end_msg 0
+        ;;
+      *)
+        log_end_msg 1
+        ;;
+    esac
+    ;;
+  restart|force-reload)
+    $0 stop
+    $0 start
+    ;;
+  try-restart)
+    $0 status >/dev/null 2>&1 && $0 restart
+    ;;
+  status)
+    do_status
+    status="$?"
+    case "$status" in
+      0)
+        log_success_msg "$NAME is running"
+        ;;
+      4)
+        log_failure_msg "status of $NAME could not be determined"
+        ;;
+      *)
+        log_failure_msg "$NAME is not running"
+        ;;
+    esac
+    exit "$status"
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|force-reload|try-restart|status}" >&2
+    exit 3
+    ;;
+esac

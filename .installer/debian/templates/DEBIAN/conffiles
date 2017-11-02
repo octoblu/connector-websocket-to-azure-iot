@@ -1,0 +1,4 @@
+/etc/default/connector-websocket-to-azure-iot
+/etc/init/connector-websocket-to-azure-iot.conf
+/etc/init.d/connector-websocket-to-azure-iot
+/etc/systemd/system/connector-websocket-to-azure-iot.service
