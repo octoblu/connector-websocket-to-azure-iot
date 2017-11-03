@@ -16,7 +16,7 @@ SCRIPT="/usr/share/connector-websocket-to-azure-iot/connector-websocket-to-azure
 USER="connector-websocket-to-azure-iot"
 NAME="connector-websocket-to-azure-iot"
 WORKING_DIRECTORY="/usr/share/connector-websocket-to-azure-iot"
-DESCRIPTION="Powermate WebSocket"
+DESCRIPTION="Connector WebSocket to Azure IoT"
 
 . /lib/lsb/init-functions
 . "/etc/default/connector-websocket-to-azure-iot"

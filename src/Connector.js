@@ -19,6 +19,8 @@ class Connector {
     if (!client) throw new Error('Missing required parameter: client')
     this.client = client
     this.client.on('message', this._onAzureMessage)
+    this.client.on('error', this._azureWaitAndConnect)
+    this.client.on('disconnect', this._azureWaitAndConnect)
 
     if (!webSocketUrl) throw new Error('Missing required parameter: webSocketUrl')
     this.webSocketUrl = webSocketUrl
@@ -26,18 +28,29 @@ class Connector {
 
   run(callback=_.noop) {
     debug('run')
-    this.client.open((error) => {
-      debug('connected!')
-      if (error) return callback(error)
-      this._wsConnect()
-      return callback()
-    })
+    this._wsConnect()
+    this.client.open()
+    return callback()
+  }
+
+  _azureWaitAndConnect(error){
+    debug('azureWaitAndConnect', error)
+    if(this.azureTimeoutHandle) {
+      clearTimeout(this.azureTimeoutHandle)
+    }
+    this.azureTimeoutHandle = setTimeout(()=> {
+      this.client.open((error)=>{
+        console.error('client open error:', error)
+      })
+    }, 1000)
   }
 
   _onWebSocketMessage(message) {
     try {
       debug('onWebSocketMessage', JSON.stringify(message,null,2))
-      this.client.sendEvent(new Message(message))
+      this.client.sendEvent(new Message(message), (error) => {
+        if (error) console.error('send event error:', error)
+      })
     } catch(error) {
       console.error( `Error sending a message from device websocket: ${error.message}`)
       return
@@ -54,19 +67,19 @@ class Connector {
 
   _wsConnect() {
     this.ws = new WebSocket(this.webSocketUrl)
-    const waitAndConnectOnce = _.once(this._waitAndConnect)
+    const wsWaitAndConnectOnce = _.once(this._wsWaitAndConnect)
     this.ws.on('message', this._onWebSocketMessage)
-    this.ws.on('error', waitAndConnectOnce)
-    this.ws.on('close', waitAndConnectOnce)
+    this.ws.on('error', wsWaitAndConnectOnce)
+    this.ws.on('close', wsWaitAndConnectOnce)
   }
 
-  _waitAndConnect(error){
+  _wsWaitAndConnect(error){
     this.ws = null
     debug('waitAndConnect', error)
-    if(this.timeoutHandle) {
-      clearTimeout(this.timeoutHandle)
+    if(this.wsTimeoutHandle) {
+      clearTimeout(this.wsTimeoutHandle)
     }
-    this.timeoutHandle = setTimeout(this.run, 1000)
+    this.wsTimeoutHandle = setTimeout(this._wsConnect, 1000)
   }
 
 }
