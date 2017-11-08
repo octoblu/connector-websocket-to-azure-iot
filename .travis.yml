@@ -8,18 +8,6 @@ matrix:
   fast_finish: true
   include:
   - os: linux
-    language: node_js
-    node_js: '8'
-    before_install:
-    - sudo apt-get -qq update
-    deploy:
-      provider: npm
-      email: serveradmin@octoblu.com
-      api_key: 
-      on:
-        tags: true
-        repo: octoblu/connector-websocket-to-azure-iot
-  - os: linux
     dist: trusty
     language: shell
     sudo: required
