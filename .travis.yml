@@ -41,7 +41,7 @@ matrix:
         octoblu/meshblu-connector-builder:linux-x86 \
           bash -c 'export HOME=/tmp/cache \
             && meshblu-connector-pkger \
-            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config/connector-websocket-to-azure-iot \
             && meshblu-connector-uploader-github \
             && upload-deb-s3 \
           '
@@ -67,7 +67,7 @@ matrix:
         octoblu/meshblu-connector-builder:linux-x64 \
           bash -c 'export HOME=/tmp/cache \
             && meshblu-connector-pkger \
-            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config/connector-websocket-to-azure-iot \
             && meshblu-connector-uploader-github \
             && upload-deb-s3 \
           '
@@ -92,7 +92,7 @@ matrix:
         octoblu/meshblu-connector-builder:linux-armv7 \
           bash -c 'export HOME=/tmp/cache \
             && meshblu-connector-pkger \
-            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config \
+            && meshblu-connector-installer-debian --destination-path=/usr/share/meshblu-connectors/connectors-no-config/connector-websocket-to-azure-iot \
             && meshblu-connector-uploader-github \
             && upload-deb-s3 \
           '
