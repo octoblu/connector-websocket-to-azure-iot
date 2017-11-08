@@ -1,6 +1,0 @@
-# Configuration for the connector-websocket-to-azure-iot daemon
-#
-# Example:
-#   export NODE_ENV="production"
-
-export MESHBLU_CONNECTOR_PM2_HOME="/var/run/connector-websocket-to-azure-iot"
