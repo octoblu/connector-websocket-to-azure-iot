@@ -19,8 +19,8 @@ class Connector {
     if (!client) throw new Error('Missing required parameter: client')
     this.client = client
     this.client.on('message', this._onAzureMessage)
-    this.client.on('error', this._azureWaitAndConnect)
-    this.client.on('disconnect', this._azureWaitAndConnect)
+    this.client.on('error', (error) => { console.error(error.stack); process.exit(1) })
+    this.client.on('disconnect', () => { process.exit(0) })
 
     if (!webSocketUrl) throw new Error('Missing required parameter: webSocketUrl')
     this.webSocketUrl = webSocketUrl
