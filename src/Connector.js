@@ -48,7 +48,9 @@ class Connector {
   _onWebSocketMessage(message) {
     try {
       debug('onWebSocketMessage', JSON.stringify(message,null,2))
-      this.client.sendEvent(new Message(message), (error) => {
+      const azureMessage = new Message(message)
+      azureMessage.expiryTimeUtc = Date.now() + 20000
+      this.client.sendEvent(azureMessage, (error) => {
         if (error) console.error('send event error:', error)
       })
     } catch(error) {

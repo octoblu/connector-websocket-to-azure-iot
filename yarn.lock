@@ -12,13 +12,13 @@ acorn@^3.0.4:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
-acorn@^5.1.1:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.2.tgz#911cb53e036807cf0fa778dc5d370fbd864246d7"
+acorn@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
 ajv-keywords@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.0.tgz#a296e17f7bfae7c1ce4f7e0de53d29cb32162df0"
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.1.tgz#617997fc5f60576894c435f940d819e135b80762"
 
 ajv@^4.9.1:
   version "4.11.8"
@@ -27,7 +27,7 @@ ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.1.0, ajv@^5.2.0, ajv@^5.2.3:
+ajv@^5.1.0:
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.2.3.tgz#c06f598778c44c6b161abafe3466b81ad1814ed2"
   dependencies:
@@ -35,6 +35,15 @@ ajv@^5.1.0, ajv@^5.2.0, ajv@^5.2.3:
     fast-deep-equal "^1.0.0"
     json-schema-traverse "^0.3.0"
     json-stable-stringify "^1.0.1"
+
+ajv@^5.2.3, ajv@^5.3.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.4.0.tgz#32d1cf08dbc80c432f426f12e10b2511f6b46474"
+  dependencies:
+    co "^4.6.0"
+    fast-deep-equal "^1.0.0"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.3.0"
 
 amqp10-transport-ws@^0.0.5:
   version "0.0.5"
@@ -140,8 +149,8 @@ async@^1.5.2:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
 async@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.5.0.tgz#843190fd6b7357a0b9e1c956edddd5ec8462b54d"
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
     lodash "^4.14.0"
 
@@ -170,14 +179,14 @@ azure-event-hubs@^0.0.8:
     bluebird "^3.4.7"
     uuid "^3.0.1"
 
-azure-iot-amqp-base@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-amqp-base/-/azure-iot-amqp-base-1.2.0.tgz#9d4916c98be0862cff82055d13ca26124ec7737e"
+azure-iot-amqp-base@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/azure-iot-amqp-base/-/azure-iot-amqp-base-1.2.3.tgz#7efbba62c660f9cad15e6952fbd1c5c1785d0f23"
   dependencies:
     amqp10 "3.5.3"
     amqp10-transport-ws "^0.0.5"
     async "^2.5.0"
-    azure-iot-common "1.2.0"
+    azure-iot-common "1.2.2"
     bluebird "^3.5.0"
     debug "^3.0.1"
     machina "^2.0.0"
@@ -189,81 +198,83 @@ azure-iot-common@1.1.3:
   dependencies:
     crypto "^0.0.3"
 
-azure-iot-common@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-common/-/azure-iot-common-1.2.0.tgz#26109d79dd27012dd2f42a0354dbf5380b1e7a9b"
+azure-iot-common@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/azure-iot-common/-/azure-iot-common-1.2.2.tgz#8782847a7cfbc1aa99f8523cce64cb3f28a4af7d"
 
 azure-iot-device-amqp@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-device-amqp/-/azure-iot-device-amqp-1.2.0.tgz#68790d322b691bec994ae1dfdccad73bb74b3fe5"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/azure-iot-device-amqp/-/azure-iot-device-amqp-1.2.3.tgz#1de45ae7995d70a48c627f44b8937f3fe9ee2721"
   dependencies:
     async "^2.5.0"
-    azure-iot-amqp-base "1.2.0"
-    azure-iot-common "1.2.0"
-    azure-iot-device "1.1.19"
+    azure-iot-amqp-base "1.2.3"
+    azure-iot-common "1.2.2"
+    azure-iot-device "1.2.2"
     debug "^3.0.1"
     machina "^2.0.0"
     uuid "^3.0.1"
 
 azure-iot-device-http@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-device-http/-/azure-iot-device-http-1.2.0.tgz#d4c8fa0a1d1f72ab98799c927a3e41e80e08544b"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/azure-iot-device-http/-/azure-iot-device-http-1.2.3.tgz#5fb4771fa8fa4b70a367f8d2723cd49170d9e7c9"
   dependencies:
-    azure-iot-common "1.2.0"
-    azure-iot-device "1.1.19"
-    azure-iot-http-base "1.2.0"
+    azure-iot-common "1.2.2"
+    azure-iot-device "1.2.2"
+    azure-iot-http-base "1.2.2"
     debug "^3.1.0"
     node-crontab "^0.0.8"
 
 azure-iot-device-mqtt@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-device-mqtt/-/azure-iot-device-mqtt-1.2.0.tgz#5b7e3504964aa25ff9e6024a57446f42d1f78f47"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/azure-iot-device-mqtt/-/azure-iot-device-mqtt-1.2.3.tgz#c3f7baa50b35f76cd2a7695929694b3ee47a26e4"
   dependencies:
-    azure-iot-common "1.2.0"
-    azure-iot-device "1.1.19"
-    azure-iot-mqtt-base "1.2.0"
+    azure-iot-common "1.2.2"
+    azure-iot-device "1.2.2"
+    azure-iot-mqtt-base "1.2.3"
     debug "^3.0.1"
     machina "^2.0.0"
 
-azure-iot-device@1.1.19, azure-iot-device@^1.1.19:
-  version "1.1.19"
-  resolved "https://registry.yarnpkg.com/azure-iot-device/-/azure-iot-device-1.1.19.tgz#affd0e671135419a11270dcd40f1754dd61150db"
+azure-iot-device@1.2.2, azure-iot-device@^1.1.19:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/azure-iot-device/-/azure-iot-device-1.2.2.tgz#8429a4d53559d020e2a829c16819b9c57f892019"
   dependencies:
-    azure-iot-common "1.2.0"
-    azure-iot-http-base "1.2.0"
-    azure-storage "^2.0.0"
-    debug "^2.6.0"
+    azure-iot-common "1.2.2"
+    azure-iot-http-base "1.2.2"
+    azure-storage "^2.6.0"
+    debug "^3.1.0"
     lodash "^4.17.4"
     machina "^2.0.0"
     traverse "^0.6.6"
 
-azure-iot-http-base@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-http-base/-/azure-iot-http-base-1.2.0.tgz#44267d25b5098e7c3d539c7623564f60d79aad40"
+azure-iot-http-base@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/azure-iot-http-base/-/azure-iot-http-base-1.2.2.tgz#5f351c1ad0b253f1b8fdca91daf7e33ca4c3a6b5"
   dependencies:
-    azure-iot-common "1.2.0"
+    azure-iot-common "1.2.2"
     debug "^2.2.0"
     uuid "^2.0.1"
 
-azure-iot-mqtt-base@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/azure-iot-mqtt-base/-/azure-iot-mqtt-base-1.2.0.tgz#4b9ff7fc6486b006c66b6353f92715cbd23ac032"
+azure-iot-mqtt-base@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/azure-iot-mqtt-base/-/azure-iot-mqtt-base-1.2.3.tgz#feb8ac13bc2794647d4643bf5428104849a60141"
   dependencies:
-    azure-iot-common "1.2.0"
+    azure-iot-common "1.2.2"
     machina "^2.0.0"
     mqtt "^2.13.0"
 
 azure-iothub@^1.1.17:
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/azure-iothub/-/azure-iothub-1.1.17.tgz#3a5bcef295fd620d3e83bbd4a486ebd5dc9ab7ae"
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/azure-iothub/-/azure-iothub-1.2.1.tgz#e10f1d074f78e13c07bae4e489ddd4bc9c31f90a"
   dependencies:
-    azure-iot-amqp-base "1.2.0"
-    azure-iot-common "1.2.0"
-    azure-iot-http-base "1.2.0"
+    async "^2.5.0"
+    azure-iot-amqp-base "1.2.3"
+    azure-iot-common "1.2.2"
+    azure-iot-http-base "1.2.2"
     debug "^2.6.3"
     lodash "^4.15.0"
+    machina "^2.0.0"
 
-azure-storage@^2.0.0:
+azure-storage@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/azure-storage/-/azure-storage-2.6.0.tgz#84747ee54a4bd194bb960f89f3eff89d67acf1cf"
   dependencies:
@@ -403,12 +414,16 @@ chalk@^1.1.3:
     supports-color "^2.0.0"
 
 chalk@^2.0.0, chalk@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.1.0.tgz#ac5becf14fa21b99c6c92ca7a7d7cfd5b17e743e"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
   dependencies:
     ansi-styles "^3.1.0"
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
+
+chardet@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.0.tgz#0bbe1355ac44d7a3ed4a925707c4ef70f8190f6c"
 
 check-error@^1.0.1:
   version "1.0.2"
@@ -439,8 +454,8 @@ co@^4.6.0:
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
 
 color-convert@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.1.tgz#c1261107aeb2f294ebffec9ed9ecad529a6097ed"
   dependencies:
     color-name "^1.1.1"
 
@@ -571,7 +586,7 @@ debug@2.6.8:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.8.1.tgz#20ff4d26f5e422cb68a1bacbbb61039ad8c1c130"
 
-debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.3, debug@^2.6.8:
+debug@^2.2.0, debug@^2.3.3, debug@^2.6.3, debug@^2.6.8:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -645,7 +660,7 @@ dreamopt@~0.6.0:
   dependencies:
     wordwrap ">=0.0.2"
 
-duplexify@^3.1.2, duplexify@^3.2.0:
+duplexify@^3.1.2, duplexify@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.5.1.tgz#4e1516be68838bc90a49994f0b39a6e5960befcd"
   dependencies:
@@ -701,8 +716,8 @@ eslint-module-utils@^2.1.1:
     pkg-dir "^1.0.0"
 
 eslint-plugin-import@^2.6.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.7.0.tgz#21de33380b9efb55f5ef6d2e210ec0e07e7fa69f"
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.8.0.tgz#fa1b6ef31fcb3c501c09859c1b86f1fc5b986894"
   dependencies:
     builtin-modules "^1.1.1"
     contains-path "^0.1.0"
@@ -716,10 +731,10 @@ eslint-plugin-import@^2.6.0:
     read-pkg-up "^2.0.0"
 
 eslint-plugin-node@^5.1.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.2.0.tgz#e1efca04a385516cff3f2f04027ce8c5ae6db749"
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.2.1.tgz#80df3253c4d7901045ec87fa660a284e32bdca29"
   dependencies:
-    ignore "^3.3.3"
+    ignore "^3.3.6"
     minimatch "^3.0.4"
     resolve "^1.3.3"
     semver "5.3.0"
@@ -736,10 +751,10 @@ eslint-scope@^3.7.1:
     estraverse "^4.1.1"
 
 eslint@^4.1.1:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.9.0.tgz#76879d274068261b191fe0f2f56c74c2f4208e8b"
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.11.0.tgz#39a8c82bc0a3783adf5a39fa27fdd9d36fac9a34"
   dependencies:
-    ajv "^5.2.0"
+    ajv "^5.3.0"
     babel-code-frame "^6.22.0"
     chalk "^2.1.0"
     concat-stream "^1.6.0"
@@ -747,7 +762,7 @@ eslint@^4.1.1:
     debug "^3.0.1"
     doctrine "^2.0.0"
     eslint-scope "^3.7.1"
-    espree "^3.5.1"
+    espree "^3.5.2"
     esquery "^1.0.0"
     estraverse "^4.2.0"
     esutils "^2.0.2"
@@ -760,7 +775,7 @@ eslint@^4.1.1:
     inquirer "^3.0.6"
     is-resolvable "^1.0.0"
     js-yaml "^3.9.1"
-    json-stable-stringify "^1.0.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
     levn "^0.3.0"
     lodash "^4.17.4"
     minimatch "^3.0.2"
@@ -777,11 +792,11 @@ eslint@^4.1.1:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espree@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.1.tgz#0c988b8ab46db53100a1954ae4ba995ddd27d87e"
+espree@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.2.tgz#756ada8b979e9dcfcdb30aad8d1a9304a905e1ca"
   dependencies:
-    acorn "^5.1.1"
+    acorn "^5.2.1"
     acorn-jsx "^3.0.0"
 
 esprima@^4.0.0:
@@ -841,11 +856,11 @@ extend@~1.2.1:
   resolved "https://registry.yarnpkg.com/extend/-/extend-1.2.1.tgz#a0f5fd6cfc83a5fe49ef698d60ec8a624dd4576c"
 
 external-editor@^2.0.4:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-2.0.5.tgz#52c249a3981b9ba187c7cacf5beb50bf1d91a6bc"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/external-editor/-/external-editor-2.1.0.tgz#3d026a21b7f95b5726387d4200ac160d372c3b48"
   dependencies:
+    chardet "^0.4.0"
     iconv-lite "^0.4.17"
-    jschardet "^1.4.2"
     tmp "^0.0.33"
 
 extsprintf@1.3.0, extsprintf@^1.2.0:
@@ -855,6 +870,10 @@ extsprintf@1.3.0, extsprintf@^1.2.0:
 fast-deep-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.0.0.tgz#96256a3bc975595eb36d82e9929d060d893439ff"
+
+fast-json-stable-stringify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
 fast-levenshtein@~2.0.4:
   version "2.0.6"
@@ -1134,9 +1153,9 @@ iconv-lite@^0.4.17:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-ignore@^3.3.3:
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.5.tgz#c4e715455f6073a8d7e5dae72d2fc9d71663dba6"
+ignore@^3.3.3, ignore@^3.3.6:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -1292,10 +1311,6 @@ jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
 
-jschardet@^1.4.2:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.5.1.tgz#c519f629f86b3a5bedba58a88d311309eec097f9"
-
 json-diff@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/json-diff/-/json-diff-0.5.2.tgz#e0bc9e434cd2c4c6354487835e01bf3fed335cda"
@@ -1317,6 +1332,10 @@ json-schema-traverse@^0.3.0:
 json-schema@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
+
+json-stable-stringify-without-jsonify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
 
 json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
   version "1.0.1"
@@ -1544,8 +1563,8 @@ mqtt-packet@^5.4.0:
     safe-buffer "^5.1.0"
 
 mqtt@^2.13.0:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/mqtt/-/mqtt-2.13.1.tgz#d83c7c5d9dc37864a363453f61fb5e1523c0144a"
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/mqtt/-/mqtt-2.14.0.tgz#640b712e3c3c02ebe97882b109499bffc65f97a8"
   dependencies:
     commist "^1.0.0"
     concat-stream "^1.6.0"
@@ -1785,8 +1804,8 @@ pseudomap@^1.0.2:
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
 pump@^1.0.0, pump@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/pump/-/pump-1.0.2.tgz#3b3ee6512f94f0e575538c17995f9f16990a5d51"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/pump/-/pump-1.0.3.tgz#5dfe8311c33bbf6fc18261f9f34702c47c08a954"
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
@@ -1840,7 +1859,7 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-"readable-stream@> 1.0.0 < 3.0.0", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.5, readable-stream@^2.1.5, readable-stream@^2.2.0, readable-stream@^2.2.2, readable-stream@^2.3.3:
+"readable-stream@> 1.0.0 < 3.0.0", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.5, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
   dependencies:
@@ -1946,8 +1965,8 @@ resolve-from@^1.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
 
 resolve@^1.2.0, resolve@^1.3.3:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.4.0.tgz#a75be01c53da25d934a98ebd0e4c4a7312f92a86"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:
     path-parse "^1.0.5"
 
@@ -2170,8 +2189,8 @@ supports-color@^2.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
 supports-color@^4.0.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.4.0.tgz#883f7ddabc165142b2a61427f3352ded195d1a3e"
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
   dependencies:
     has-flag "^2.0.0"
 
@@ -2323,14 +2342,14 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 websocket-stream@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/websocket-stream/-/websocket-stream-5.0.1.tgz#51cb992988c2eeb4525ccd90eafbac52a5ac6700"
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/websocket-stream/-/websocket-stream-5.1.1.tgz#68d23916cdf53689cff73e213fa2178dbcea6169"
   dependencies:
-    duplexify "^3.2.0"
+    duplexify "^3.5.1"
     inherits "^2.0.1"
-    readable-stream "^2.2.0"
-    safe-buffer "^5.0.1"
-    ws "^3.0.0"
+    readable-stream "^2.3.3"
+    safe-buffer "^5.1.1"
+    ws "^3.2.0"
     xtend "^4.0.0"
 
 which@^1.2.9:
@@ -2353,9 +2372,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-3.2.0.tgz#d5d3d6b11aff71e73f808f40cc69d52bb6d4a185"
+ws@^3.0.0, ws@^3.2.0:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-3.3.1.tgz#d97e34dee06a1190c61ac1e95f43cb60b78cf939"
   dependencies:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
